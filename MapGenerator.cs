@@ -6,9 +6,7 @@ public class MapGenerator : MonoBehaviour {
     public int _sizeY;
     void Start()
     {
-        __MapGenerator(_sizeX, _sizeY);
-
-        
+        __MapGenerator(_sizeX, _sizeY);        
     }
 
     void __MapGenerator(int sizeX, int sizeY)
@@ -18,10 +16,9 @@ public class MapGenerator : MonoBehaviour {
         //__hex = SimpleHex.SimpleMesh();
         __hex = SimpleHex.HexMap(sizeX, sizeY, 0);
 
-        MeshFilter mesh_filter = GetComponent<MeshFilter>();
-        mesh_filter.mesh = __hex;
-        mesh_filter.name = "Hex Map";
-        mesh_filter.mesh.name = "Hex";
-        //transform = new Vector3(-size, 0 - size);
+        MeshFilter  mesh_filter = GetComponent<MeshFilter>();
+                    mesh_filter.mesh = __hex;
+                    mesh_filter.name = "Hex Map";
+                    mesh_filter.mesh.name = "Hex";   
     }
 }
