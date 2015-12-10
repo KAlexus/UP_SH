@@ -24,7 +24,7 @@ public class HexMapMouse : MonoBehaviour
     public Vector2 PixelToHex(int _size)
     {
 
-        Vector2 hexNum = new Vector2(0, 0);
+        Vector2 hexNum = new Vector2(-1, -1);
 
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
